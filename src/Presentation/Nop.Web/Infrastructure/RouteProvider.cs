@@ -574,6 +574,10 @@ namespace Nop.Web.Infrastructure
             //page not found
             endpointRouteBuilder.MapControllerRoute("PageNotFound", $"{pattern}page-not-found",
                 new { controller = "Common", action = "PageNotFound" });
+
+            //search auto complete
+            endpointRouteBuilder.MapControllerRoute("SearchAutoComplete", $"{pattern}searchcomplete/searchautocomplete",
+                new { controller = "SearchComplete", action = "SearchAutoComplete" });
         }
 
         #endregion
