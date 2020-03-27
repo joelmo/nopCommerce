@@ -98,8 +98,8 @@
                                             $('#search-product-name').autocomplete({
                                                 delay: 500,
                                                 minLength: 3,
-                                                source: '@(Url.Action("SearchAutoComplete"))',
-                                                select: function(event, ui) {
+                                                source: '@Url.RouteUrl("SearchAutoComplete")',
+                                                select: function (event, ui) {
                                                     $('#@Html.IdFor(model => model.SearchProductId)')
                                                         .val(ui.item.productid);
                                                     $('#search-product-friendly-name').text(ui.item.label);
